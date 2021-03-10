@@ -30,7 +30,7 @@ namespace MailApp.Controllers
         {
             var rng = new Random();
 
-            var message = new Message(new string[] { "codemazetest@mailinator.com" }, "Test email async", "This is the content from our async email.", null);
+            var message = new Message(new string[] { "quanxing99@gmail.com" }, "Test email async", "This is the content from our async email.", null);
             await _emailSender.SendEmailAsync(message);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -49,7 +49,7 @@ namespace MailApp.Controllers
 
             var files = Request.Form.Files.Any() ? Request.Form.Files : new FormFileCollection();
 
-            var message = new Message(new string[] { "codemazetest@mailinator.com" }, "Test mail with Attachments", "This is the content from our mail with attachments.", files);
+            var message = new Message(new string[] { "testsendmailax@gmail.com" }, "Test mail with Attachments", "This is the content from our mail with attachments.", files);
             await _emailSender.SendEmailAsync(message);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
